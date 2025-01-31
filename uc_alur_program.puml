@@ -1,0 +1,21 @@
+@startuml
+actor "Pengguna Umum" as User
+actor "Admin" as Admin
+
+rectangle "Sistem Pencatatan Konsumsi Vitamin & Suplemen" {
+
+    User --> (Mendaftar)
+    (Mendaftar) --> (Login)
+    (Login) --> (Menambahkan Vitamin/Suplemen) 
+    (Menambahkan Vitamin/Suplemen) --> (Mengatur Jadwal Konsumsi) 
+    (Mengatur Jadwal Konsumsi) --> (Mengaktifkan Pengingat) 
+    (Mengaktifkan Pengingat) --> (Melihat Riwayat Konsumsi) 
+    (Melihat Riwayat Konsumsi) --> (Menerima Analisis Pola Konsumsi) 
+
+    Admin --> (Login) 
+    Admin --> (Mengelola Daftar Vitamin/Suplemen) 
+    (Mengelola Daftar Vitamin/Suplemen) --> (Mengelola Pengguna) 
+    (Mengelola Pengguna) --> (Memantau Performa Sistem) 
+}
+
+@enduml

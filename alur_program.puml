@@ -1,0 +1,23 @@
+@startuml
+start
+
+:Pengguna mengisi data untuk membuat akun;
+if (Verifikasi Data Pendaftaran) then (Berhasil)
+  :Akunnya berhasil dibuat;
+else (Gagal)
+  stop
+endif
+
+:Pengguna menambahkan suplemen baru;
+:Pengguna mengisi nama, dosis, dan waktu konsumsi;
+:Sistem menyimpan data suplemen;
+
+:Sistem mengatur pengingat konsumsi sesuai waktu yang ditentukan;
+:Pengguna menerima pengingat konsumsi;
+
+:Sistem menghasilkan laporan konsumsi suplemen;
+:Sistem menampilkan grafik status konsumsi;
+:Pengguna melihat laporan secara visual;
+
+stop
+@enduml
